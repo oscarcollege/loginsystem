@@ -22,12 +22,13 @@ $logged_in = $output[1];
 </head>
 <body>
     <nav>
+        <div class="nav-title">Mup Pet Chat</div>
         <?php if ($logged_in == true): ?>
-            <div><?=$user->get_username();?></div>
-            <div><a href="signout.php">Sign Out</a></div>
+            <?=$user->get_username();?>
+            <a class="nav-button" href="signout.php">Sign Out</a>
         <?php else: ?>
-            <div><a href="signup.php">Sign Up</a></div>
-            <div><a href="signin.php">Sign In</a></div>
+            <a class="nav-button" href="signup.php">Sign Up</a>
+            <a class="nav-button" href="signin.php">Sign In</a>
         <?php endif; ?>
     </nav>
 </body>
