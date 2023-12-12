@@ -1,5 +1,5 @@
 <?php
-include_once 'users.php';
+include_once 'user-class.php';
 include_once 'db.php';
 
 if (session_status() == PHP_SESSION_NONE) {

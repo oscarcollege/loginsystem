@@ -7,7 +7,7 @@
 </head>
 <body>
     <?php 
-    include_once 'users.php';
+    include_once 'user-class.php';
     if (session_status() == PHP_SESSION_NONE) {
         session_start();
     }

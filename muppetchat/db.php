@@ -1,5 +1,4 @@
 <?php
-#session_start();
 
 function connect() {
     $hostname = 'localhost';
@@ -25,10 +24,10 @@ function get_user_session() {
     return array($user, $logged_in);
 }
 
-function get_user_by_email($email) {
+function get_user_by_email($email, $selection) {
     $conn = connect();
 
-    $query = "SELECT * FROM users WHERE email = '{$email}'";
+    $query = "SELECT {$selection} FROM users WHERE email = '{$email}'";
     $result = $conn->query($query);
     if ($result->num_rows == 1) {
         return $result->fetch_assoc();

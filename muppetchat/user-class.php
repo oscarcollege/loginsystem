@@ -25,7 +25,7 @@ class User {
     }
 
     function authenticate() {
-        $db_entry = get_user_by_email($this->email);
+        $db_entry = get_user_by_email($this->email, '*');
 
         if (password_verify($this->password, $db_entry['password'])) {
             $_SESSION['user'] = $this;
@@ -41,6 +41,11 @@ class User {
 
     function get_username() {
         return $this->username;
+    }
+
+    function get_id() {
+        $id = get_user_by_email($this->email, 'id');
+        return $id;
     }
 }
 
