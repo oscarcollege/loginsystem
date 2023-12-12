@@ -14,7 +14,7 @@ class Post {
     private $messages;
 
     function __construct($conn, $uploader_id, $content, $tags) {
-        $this->uploader_id = mysqli_real_escape_string($conn, $uploader_id);
+        $this->uploader_id = $uploader_id;
         $this->date_uploaded = time();
         $this->content = mysqli_real_escape_string($conn, $content);
         $this->tags = mysqli_real_escape_string($conn, $tags);

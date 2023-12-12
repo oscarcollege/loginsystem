@@ -21,12 +21,12 @@ body {
 
 .nav-button {
     background-color: #000000;
-    transition: background-color 0.2s;
+    transition: background-color 0.2s !important;
     transition-timing-function: ease-out;
 }
 
 .nav-button:hover {
-    background-color: #232323;
+    background-color: #232323 !important;
 }
 
 a {

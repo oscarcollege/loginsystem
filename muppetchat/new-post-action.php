@@ -1,7 +1,7 @@
 <?php
+include_once "user-class.php";
 include_once "db.php";
-include "post-class.php";
-include "user-class.php";
+include_once "post-class.php";
 
 $conn = connect();
 
