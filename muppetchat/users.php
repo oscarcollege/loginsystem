@@ -1,8 +1,6 @@
 <?php
 include_once 'db.php';
 
-#$conn = connect();
-
 if (session_status() == PHP_SESSION_NONE) {
     session_start();
 }

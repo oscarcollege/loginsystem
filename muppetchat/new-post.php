@@ -12,8 +12,7 @@
     <div class="new-post-content">
         <h1>Create Post</h1>
         <form class="new-post-form" action="new-post-action.php" method="get">
-            <textarea name="post-content" id="post-content" required>
-Write your post here! You can use HTML to format how you want.</textarea>
+            <textarea name="post-content" id="post-content" required placeholder="Write your post here! You can use HTML to format how you want."></textarea>
             <input type="submit" value="Submit">
         </form>
     </div>

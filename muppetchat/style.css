@@ -49,10 +49,13 @@ a {
 }
 
 #post-content {
-    width: 80%;
+    width: calc(100% - 0.4rem); /*take away side padding and border*/
     height: 80%;
-    padding: 0.2rem;
-    margin: 0rem;
+    padding-left: 0.4rem;
+    padding-right: 0rem;
+    border-width: 0rem;
+    resize: vertical;
+    outline: none;
 }
 
 .new-post-form {
@@ -60,5 +63,5 @@ a {
     height: 100%;
     display: flex;
     flex-direction: column;
-    align-content: center;
+    align-items: center;
 }
