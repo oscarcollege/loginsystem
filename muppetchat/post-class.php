@@ -26,19 +26,19 @@ class Post {
 
     function add_to_db() {
         $sql = "INSERT INTO posts 
-        (content, 
-        date uploaded, 
-        tags json, 
-        uploader id, 
-        score, 
-        messages json)
+        (`content`, 
+        `unix time uploaded`, 
+        `tags json`, 
+        `uploader id`, 
+        `score`, 
+        `messages json`)
         VALUES
-        ({$this->content},
-        {$this->date_uploaded},
-        {$this->tags},
-        {$this->uploader_id},
-        {$this->score},
-        {$this->messages})";
+        ('{$this->content}',
+        '{$this->date_uploaded}',
+        '{$this->tags}',
+        '{$this->uploader_id}',
+        '{$this->score}',
+        '{$this->messages}')";
 
         $query = $this->connection->query($sql);
     }

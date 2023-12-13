@@ -45,6 +45,7 @@ class User {
 
     function get_id() {
         $id = get_user_by_email($this->email, 'id');
+        $id = $id['id'];
         return $id;
     }
 }

@@ -34,6 +34,13 @@ function get_user_by_email($email, $selection) {
     } else {
         throw new Exception('either no account with email or more than 1 account with email');
     }
+}
+
+function get_all_posts() {
+    $conn = connect();
+
+    $query = "SELECT * FROM posts";
+    $result = $conn->query($query);
     return $result;
 }
 
