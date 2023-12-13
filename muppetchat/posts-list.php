@@ -20,7 +20,12 @@ $posts = get_all_posts();
     <div class="content">
         <?php while ($row=$posts->fetch_array(MYSQLI_ASSOC)): ?>
             <div class="post">
-                <?=$row['content']?>
+                <div class="post-header">
+                    <span><?=$row['unix time uploaded']?></span>
+                </div>
+                <div class="post-body">
+                    <?=$row['content']?>
+                </div>
             </div>
         <?php endwhile; ?>
     </div>
