@@ -39,9 +39,21 @@ function get_user_by_email($email, $selection) {
 function get_all_posts() {
     $conn = connect();
 
-    $query = "SELECT * FROM posts";
+    $query = "SELECT * FROM posts ORDER BY `unix time uploaded` DESC";
     $result = $conn->query($query);
     return $result;
+}
+
+function id_to_username($id) {
+    $conn = connect();
+
+    $query = "SELECT * FROM users WHERE id = ?";
+    $stmt = $conn->prepare($query);
+    $stmt->bind_param('i', $id);
+    $stmt->execute();
+    $result = $stmt->get_result();
+
+    return serialize($result);
 }
 
 ?>

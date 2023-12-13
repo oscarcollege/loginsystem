@@ -68,24 +68,28 @@ a {
 }
 
 #post-content {
-    width: calc(100% - var(--nav-width));
-    height: 20rem;
-    padding-right: 0rem;
-    border-width: 0rem;
+    width: 85%;
+    height: 85%;
     resize: vertical;
+    border-width: 0rem;
     outline: none;
 }
 
 .new-post-content {
     display: flex;
-    width: 100%;
+    width: 100vw;
+    height: 100vh;
     flex-direction: column;
     align-items: center;
-    padding-left: var(--nav-width);
+    margin-left: var(--nav-width);
 }
 
-.post-submit {
-
+.new-post-form {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .post {
@@ -94,5 +98,16 @@ a {
     background-color: #dadada;
     text-align: center;
     margin: 3rem;
+    padding: 0rem;
+}
+
+.post-header {
+    font-size: 0.75rem;
+    display: flex;
+    flex-direction: row;
+    margin: 0.2rem;
+}
+
+.post-body {
     padding: 1rem;
 }

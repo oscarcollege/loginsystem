@@ -22,6 +22,7 @@ $posts = get_all_posts();
             <div class="post">
                 <div class="post-header">
                     <span><?=$row['unix time uploaded']?></span>
+                    <span><?=id_to_username($row['uploader id'])?></span>
                 </div>
                 <div class="post-body">
                     <?=$row['content']?>
