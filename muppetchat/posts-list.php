@@ -21,8 +21,8 @@ $posts = get_all_posts();
         <?php while ($row=$posts->fetch_array(MYSQLI_ASSOC)): ?>
             <div class="post">
                 <div class="post-header">
-                    <span><?=$row['unix time uploaded']?></span>
-                    <span><?=id_to_username($row['uploader id'])?></span>
+                    <span class="post-uploader"><?=id_to_username($row['uploader id'])?></span>
+                    <span class="post-date"><?=gmdate("d/m/Y H:i", $row['unix time uploaded'])?></span>
                 </div>
                 <div class="post-body">
                     <?=$row['content']?>

@@ -51,9 +51,12 @@ function id_to_username($id) {
     $stmt = $conn->prepare($query);
     $stmt->bind_param('i', $id);
     $stmt->execute();
+    if (!$stmt->execute()) {
+        die("Error: " . $stmt->error);
+    }
     $result = $stmt->get_result();
 
-    return serialize($result);
+    return $result->fetch_assoc()['username'];
 }
 
 ?>
