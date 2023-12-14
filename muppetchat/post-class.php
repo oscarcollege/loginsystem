@@ -8,14 +8,16 @@ if (session_status() == PHP_SESSION_NONE) {
 class Post {
     private $uploader_id;
     private $date_uploaded;
+    private $title;
     private $content;
     private $tags;
     private $score;
     private $messages;
 
-    function __construct($conn, $uploader_id, $content, $tags) {
+    function __construct($conn, $uploader_id, $title, $content, $tags) {
         $this->uploader_id = $uploader_id;
         $this->date_uploaded = time();
+        $this->title = mysqli_real_escape_string($conn, $title);
         $this->content = mysqli_real_escape_string($conn, $content);
         $this->tags = mysqli_real_escape_string($conn, $tags);
         $this->score = 0;
@@ -26,14 +28,16 @@ class Post {
 
     function add_to_db() {
         $sql = "INSERT INTO posts 
-        (`content`, 
+        (`title`,
+        `content`, 
         `unix time uploaded`, 
         `tags json`, 
         `uploader id`, 
         `score`, 
         `messages json`)
         VALUES
-        ('{$this->content}',
+        ('{$this->title}',
+        '{$this->content}',
         '{$this->date_uploaded}',
         '{$this->tags}',
         '{$this->uploader_id}',

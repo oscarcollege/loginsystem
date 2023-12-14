@@ -44,6 +44,18 @@ function get_all_posts() {
     return $result;
 }
 
+function get_post_by_id($id) {
+    $conn = connect();
+
+    $query = "SELECT * FROM posts WHERE id = ?";
+    $stmt = $conn->prepare($query);
+    $stmt->bind_param('i', $id);
+    $stmt->execute();
+    $result = $stmt->get_result();
+
+    return $result->fetch_assoc();
+}
+
 function id_to_username($id) {
     $conn = connect();
 

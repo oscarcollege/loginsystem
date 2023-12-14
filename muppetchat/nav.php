@@ -33,6 +33,18 @@ $logged_in = $output[1];
         <?php endif; ?>
         <a class="nav-element nav-button" href="tags-list.php">Tags</a>
         <a class="nav-element nav-button" href="posts-list.php">All Posts</a>
+        <a class="nav-element nav-button" href="posts-list.php">All Posts</a>
+        <a class="nav-element nav-button" href="posts-list.php">All Posts</a>
+        <a class="nav-element nav-button" href="posts-list.php">All Posts</a>
+        <a class="nav-element nav-button" href="posts-list.php">All Posts</a>
+        <a class="nav-element nav-button" href="posts-list.php">All Posts</a>
+        <a class="nav-element nav-button" href="posts-list.php">All Posts</a>
+        <a class="nav-element nav-button" href="posts-list.php">All Posts</a>
+        <a class="nav-element nav-button" href="posts-list.php">All Posts</a>
+        <a class="nav-element nav-button" href="posts-list.php">All Posts</a>
+        <a class="nav-element nav-button" href="posts-list.php">All Posts</a>
+        <a class="nav-element nav-button" href="posts-list.php">All Posts</a>
+        <a class="nav-element nav-button" href="posts-list.php">All Posts</a>
     </nav>
 </body>
 </html>

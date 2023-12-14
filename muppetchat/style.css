@@ -2,6 +2,10 @@
     --nav-width: 12rem;
     --nav-base-colour: #000000;
     --nav-selected-colour: #b0b0b0;
+    --post-colour: #232323;
+    --main-width: 80%;
+    --post-text-colour: #d5d5d5;
+    --post-header-colour: #303030;
 }
 
 nav {
@@ -19,6 +23,7 @@ nav {
 body {
     margin: 0rem;
     background-color: #000000;
+    color: var(--nav-selected-colour);
     display: flex;
     flex-direction: row;
 }
@@ -67,15 +72,29 @@ a {
     display: flex;
     flex-direction: column;
     align-items: center;
+    width: 100%;
     margin-left: var(--nav-width);
 }
 
 #post-content {
-    width: 85%;
-    height: 85%;
+    width: var(--main-width);
+    height: var(--main-width);
     resize: vertical;
     border-width: 0rem;
     outline: none;
+    background-color: #000000;
+    color: var(--nav-selected-colour);
+}
+
+.post-title {
+    width: var(--main-width);
+    background-color: #000000;
+    color: var(--nav-selected-colour);
+    border: none;
+    outline: none;
+    font-size: 1.5rem;
+    margin: 0.3rem;
+    font-family: monospace;
 }
 
 .new-post-content {
@@ -96,12 +115,12 @@ a {
 }
 
 .post {
-    width: 80%;
-    height: 20rem;
-    background-color: #232323;
-    color: #d5d5d5;
+    width: var(--main-width);
+    height: fit-content;
+    background-color: var(--post-colour);
+    color: var(--post-text-colour);
     text-align: center;
-    margin: 3rem;
+    margin: 1rem;
     padding-bottom: 0.6rem;
     cursor: pointer;
     font-size: 1.2rem;
@@ -110,7 +129,7 @@ a {
 
 .post-header {
     font-size: 1rem;
-    background-color: #303030;
+    background-color: var(--post-header-colour);
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -118,5 +137,22 @@ a {
 }
 
 .post-body {
-    padding: 1rem;
+    padding: 0.75rem;
+}
+
+.big-post {
+    background-color: var(--post-colour);
+    color: var(--post-text-colour);
+    width: var(--main-width);
+    height: 100%;
+}
+
+.big-post-title {
+    background-color: var(--post-header-colour);
+    padding: 2rem;
+}
+
+.big-post-content {
+    height: 100%;
+    background-color: var(--post-colour);
 }
