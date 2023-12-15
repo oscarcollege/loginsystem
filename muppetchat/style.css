@@ -74,6 +74,7 @@ a {
     align-items: center;
     width: 100%;
     margin-left: var(--nav-width);
+    margin-top: 1rem;
 }
 
 #post-content {
@@ -145,14 +146,29 @@ a {
     color: var(--post-text-colour);
     width: var(--main-width);
     height: 100%;
+    margin: 3rem;
 }
 
 .big-post-title {
     background-color: var(--post-header-colour);
-    padding: 2rem;
+    padding: 1.5rem;
+    font-size: 2rem;
+}
+
+.big-post-info {
+    background-color: #292929;
+    display: flex;
+    flex-direction: row;
+    padding: 0.25rem;
+    justify-content: space-between;
 }
 
 .big-post-content {
-    height: 100%;
     background-color: var(--post-colour);
+    height: fit-content;
+    padding: 0.25rem;
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+    margin-left: 0.5rem;
+    margin-right: 0.5rem
 }
