@@ -71,4 +71,22 @@ function id_to_username($id) {
     return $result->fetch_assoc()['username'];
 }
 
+function add_post_view($id) {
+    $conn = connect();
+
+    $query = "SELECT * FROM posts WHERE id = ?";
+    $stmt = $conn->prepare($query);
+    $stmt->bind_param('i', $id);
+    $stmt->execute();
+    $result = $stmt->get_result();
+    $row = $result->fetch_assoc();
+    $views = $row['views'];
+    $new_views = $views + 1;
+
+    $sql = "UPDATE posts SET views = ? WHERE id = ?";
+    $stmt = $conn->prepare($sql);
+    $stmt->bind_param('ii', $new_views, $id);
+    $stmt->execute();
+}
+
 ?>

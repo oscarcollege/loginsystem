@@ -22,6 +22,7 @@ $posts = get_all_posts();
             <div class="post" onclick="window.location.href='view-post.php?id=<?=$row['id']?>'">
                 <div class="post-header">
                     <span class="post-uploader"><?=id_to_username($row['uploader id'])?></span>
+                    <span>views: <?=$row['views']?></span>
                     <span class="post-date"><?=gmdate("d/m/Y H:i", $row['unix time uploaded'])?></span>
                 </div>
                 <div class="post-body">

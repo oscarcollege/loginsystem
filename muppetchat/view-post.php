@@ -5,6 +5,8 @@ $conn = connect();
 
 $post = get_post_by_id($_GET['id']);
 
+add_post_view($_GET['id']);
+
 ?>
 
 <!DOCTYPE html>
@@ -26,6 +28,7 @@ $post = get_post_by_id($_GET['id']);
                 <span>by: <?=id_to_username($post['uploader id'])?></span>
                 <span><?=gmdate("d/m/Y", $post['unix time uploaded'])?></span>
                 <span><?=$post['tags json']?></span>
+                <span><?=$post['views']?> views</span>
                 <span>
                     <img src="https://cdn-icons-png.flaticon.com/512/8213/8213544.png" alt="vote up icon" height="10rem">
                     <span><?=$post['score']?></span>
