@@ -121,7 +121,7 @@ a {
     background-color: var(--post-colour);
     color: var(--post-text-colour);
     text-align: center;
-    margin: 1rem;
+    margin: 0.5rem;
     padding-bottom: 0.6rem;
     cursor: pointer;
     font-size: 1.2rem;
@@ -153,6 +153,7 @@ a {
     background-color: var(--post-header-colour);
     padding: 1.5rem;
     font-size: 2rem;
+    font-weight: bold;
 }
 
 .big-post-info {
