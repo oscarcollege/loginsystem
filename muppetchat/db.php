@@ -44,6 +44,18 @@ function get_all_posts() {
     return $result;
 }
 
+function get_posts_from_user($uploader_id) {
+    $conn = connect();
+
+    $query = "SELECT * FROM posts WHERE `uploader id` = ? ORDER BY `unix time uploaded` DESC";
+    $stmt = $conn->prepare($query);
+    $stmt->bind_param('i', $uploader_id);
+    $stmt->execute();
+    $result = $stmt->get_result();
+
+    return $result->fetch_assoc();
+}
+
 function get_post_by_id($id) {
     $conn = connect();
 
@@ -53,7 +65,7 @@ function get_post_by_id($id) {
     $stmt->execute();
     $result = $stmt->get_result();
 
-    return $result->fetch_assoc();
+    return $result;
 }
 
 function id_to_username($id) {

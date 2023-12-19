@@ -173,3 +173,8 @@ a {
     margin-left: 0.5rem;
     margin-right: 0.5rem
 }
+
+.profile-name {
+    font-size: 3rem;
+    font-weight: bold;
+}
